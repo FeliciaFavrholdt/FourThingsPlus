@@ -20,6 +20,12 @@
             <p>You are logged in with the role of "${sessionScope.user.role}".</p>
         </c:if>
 
+        <c:forEach var="item" items="${requestScope.itemList}">
+            ${item.created}
+            ${item.name}
+            ${item.username}<br/>
+        </c:forEach>
+
         <c:if test="${sessionScope.user == null}">
             <p>You are not logged in yet. You can do it here: <a
                     href="../login.jsp">Login</a></p>

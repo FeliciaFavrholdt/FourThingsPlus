@@ -14,16 +14,15 @@
 
     <jsp:body>
 
-        <p>Startcode for 2nd semester </p>
+        <h3>You can log in here</h3>
 
-        <c:if test="${sessionScope.user != null}">
-            <p>You are logged in with the role of "${sessionScope.user.role}".</p>
-        </c:if>
-
-        <c:if test="${sessionScope.user == null}">
-            <p>You are not logged in yet. You can do it here: <a
-                    href="login.jsp">Login</a></p>
-        </c:if>
+        <form action="login" method="post">
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username"/>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password"/>
+            <input type="submit"  value="Log in"/>
+        </form>
 
     </jsp:body>
 
