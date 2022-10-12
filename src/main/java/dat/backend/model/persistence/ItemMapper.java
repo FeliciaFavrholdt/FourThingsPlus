@@ -33,4 +33,17 @@ class ItemMapper {
         }
         return itemList;
     }
+
+    public static void toggleDone(int item_id, ConnectionPool connectionPool) {
+        String sql = "UPDATE item SET done = 1 - done WHERE item_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                ps.setInt(1, item_id);
+                ps.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
