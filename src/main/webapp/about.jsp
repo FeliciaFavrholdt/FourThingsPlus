@@ -11,7 +11,7 @@
     <jsp:body>
 
         <h3>About this website</h3>
-        <p>This website is created on 2. sem</p>
+        <p>This website is created on 2. sem - welcome</p>
 
     </jsp:body>
 

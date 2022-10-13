@@ -1,8 +1,6 @@
 package dat.backend.model.persistence;
 
 import dat.backend.model.entities.Item;
-import dat.backend.model.entities.User;
-import dat.backend.model.exceptions.DatabaseException;
 
 import java.util.List;
 
@@ -12,7 +10,7 @@ public class ItemFacade
         return ItemMapper.getAll(connectionPool);
     }
 
-    public static void toggleDone(int item_id, ConnectionPool connectionPool) {
-        ItemMapper.toggleDone(item_id, connectionPool);
+    public static void toggleItem(int item_id, ConnectionPool connectionPool) {
+        ItemMapper.toggleItem(item_id, connectionPool);
     }
 }

@@ -26,7 +26,7 @@
                         <tr>
                             <td>${item.name} (${item.created})</td>
                             <td>
-                                <button formaction="done" name="item_id" value="${item.id}">Done</button>
+                                <button formaction="toggleitem" name="item_id" value="${item.id}">Done</button>
                                 <button formaction="edit" name="item_id" value="${item.id}">Edit</button>
                             </td>
                         </tr>
@@ -47,7 +47,7 @@
                         <tr>
                             <td>${item.name} (${item.created})</td>
                             <td>
-                                <button formaction="done" name="item_id" value="${item.id}">Undo</button>
+                                <button formaction="toggleitem" name="item_id" value="${item.id}">Undo</button>
                             </td>
                         </tr>
                     </c:if>
