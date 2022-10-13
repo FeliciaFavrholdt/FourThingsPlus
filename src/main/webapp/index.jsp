@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page errorPage="error.jsp" isErrorPage="false" %>
 
-<t:fourthingsplus_template>
+<t:fourthingsplus>
     <jsp:attribute name="header">
          Fourthingsplus
     </jsp:attribute>
@@ -22,4 +22,4 @@
 
     </jsp:body>
 
-</t:fourthingsplus_template>
+</t:fourthingsplus>

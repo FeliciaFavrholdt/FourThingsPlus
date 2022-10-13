@@ -3,7 +3,6 @@ package dat.backend.model.entities;
 import java.sql.Timestamp;
 
 public class Item {
-
     private int id;
     private String name;
     private boolean done;

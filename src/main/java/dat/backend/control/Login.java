@@ -17,25 +17,21 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "login", urlPatterns = {"/login"} )
-public class Login extends HttpServlet
-{
+@WebServlet(name = "Login", urlPatterns = {"/login"} )
+public class Login extends HttpServlet {
     private ConnectionPool connectionPool;
 
     @Override
-    public void init() throws ServletException
-    {
+    public void init() throws ServletException {
         this.connectionPool = ApplicationStart.getConnectionPool();
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
-    {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // You shouldn't end up here with a GET-request, thus you get sent back to frontpage
         response.sendRedirect("index.jsp");
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
-    {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
         HttpSession session = request.getSession();
         session.setAttribute("user", null); // invalidating user object in session scope

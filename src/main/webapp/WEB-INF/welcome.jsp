@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page errorPage="../error.jsp" isErrorPage="false" %>
 
-<t:fourthingsplus_template>
+<t:fourthingsplus>
     <jsp:attribute name="header">
          Welcome to the logged in area
     </jsp:attribute>
@@ -27,7 +27,7 @@
                             <td>${item.name} (${item.created})</td>
                             <td>
                                 <button formaction="toggleitem" name="item_id" value="${item.id}">Done</button>
-                                <button formaction="edit" name="item_id" value="${item.id}">Edit</button>
+                                <button formaction="editform" name="item_id" value="${item.id}">Edit</button>
                             </td>
                         </tr>
                     </c:if>
@@ -57,4 +57,4 @@
 
     </jsp:body>
 
-</t:fourthingsplus_template>
+</t:fourthingsplus>
